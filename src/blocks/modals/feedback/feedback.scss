@@ -1,0 +1,116 @@
+.feedback {
+	position: relative;
+	align-items: center;
+	padding: 35px 65px 25px;
+	background-color: white;	
+}
+
+.feedback-form {
+	color: $gray2;
+	&__heading {
+		font-size: 24px;
+		font-weight: 600;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+	}
+	&__label {
+		text-align: center;
+		line-height: 1;
+		margin-bottom: 8px;
+	}
+	&__input {
+		width: 441px;
+		height: 42px;
+		margin-bottom: 20px;
+		border: 1px solid $gray1;
+		padding: 0 15px;
+		&.invalid {
+			border-color: $red;
+			box-shadow: inset 0 0 13px $red;
+			&::-webkit-input-placeholder { 
+				color: $red;
+				font-style: italic;
+			}
+			&::-moz-placeholder {
+				color: $red;
+				font-style: italic;
+			}
+			&:-ms-input-placeholder {
+				color: $red;
+				font-style: italic;
+			}
+			&:-moz-placeholder {
+				color: $red;
+				font-style: italic;
+			}
+		}
+	}
+	&__textarea {
+		padding-top: 10px;
+		overflow: hidden;
+		resize: vertical;
+		min-height: 142px;
+		font-family: $font-family_base;
+	}
+	&__btn-wrapper {
+		text-align: center;
+	}
+	&__btn {
+		display: inline-block;
+		padding: 14px 17px 15px;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 600;
+		background-color: $black;
+		color: white;
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		&.inactive {
+			background-color: $darkgray2;
+			&:hover {			
+				cursor: default;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.close-modal {
+	$close_modal_size: 27px;
+	position: absolute;
+	top: -$close_modal_size;
+	right: -$close_modal_size;
+	height: $close_modal_size;
+	width: $close_modal_size;
+	background-color: $darkgray2;
+	color: white;
+	font-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 15px;
+	background-image: $icon_cross;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.feedback {
+		width: 100%;
+	}
+
+	.feedback-form {
+		&__input {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.feedback {
+		padding: 15px;
+	}
+}

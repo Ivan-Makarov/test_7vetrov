@@ -1,0 +1,14 @@
+section.feedback
+	button.close-modal
+	form.feedback-form.container-flex.container-flex_col 
+		h2.feedback-form__heading Обратная связь
+		label.feedback-form__label(for="feedback-form-name") Ваше имя *
+		input.feedback-form__input(id="feedback-form-name" type="text" name="name")
+		label.feedback-form__label(for="feedback-form-tel") Телефон *
+		input.feedback-form__input(id="feedback-form-tel" type="tel" name="tel")
+		label.feedback-form__label(for="feedback-form-email") Email *
+		input.feedback-form__input(id="feedback-form-email" type="email" name="email")
+		label.feedback-form__label(for="feedback-form-msg") Сообщение
+		textarea.feedback-form__input.feedback-form__textarea(id="feedback-form-msg" name="message")
+		.feedback-form__btn-wrapper
+			button.feedback-form__btn.inactive(type="submit") Отправить

@@ -1,0 +1,55 @@
+.footer {
+	background-color: $footer_bgc;
+	color: white;
+	padding: 40px 0 50px;
+	&__links {
+		min-width: 240px;
+	}
+	&__links-item {
+		margin-bottom: 10px;
+	}
+	&__link {
+		display: block;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	&__email {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.developer {
+	min-width: 230px;
+	&__logo {
+		height: 38px
+	}
+	&__company {
+		margin-left: 11px;
+	}
+	&__link {
+		line-height: 1;
+		display: block;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.footer {
+		> .content {
+			flex-direction: column;
+			> * {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

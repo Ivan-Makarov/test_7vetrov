@@ -1,0 +1,32 @@
+$font_size_base: 14px;
+$font_family_base: "PT Sans", Arial, Helvetica, sans-serif;
+$font_family_emph: "Open Sans Condensed", Arial, Helvetica, sans-serif;
+
+$content_width: 1000px;
+$content_padding: 0 10px;
+
+$lightgray1: #dcdcdc;
+$lightgray2: #dbdbdb;
+$darkgray1: #767676;
+$darkgray2: #777777;
+$darkgray3: #444444;
+$gray1: #c3c3c3;
+$gray2: #535353;
+$black: #010101;
+$red: #e46a6a;
+
+$text_col_main: $darkgray1;
+$header_bgc: $lightgray1;
+
+$menu_bgc: $darkgray2;
+$menu_col: white;
+
+$catalogue_item_bgc: $lightgray2;
+$catalogue_item_price_col: $darkgray3;
+
+$footer_bgc: $darkgray1;
+
+$icon_cart: url('../img/cart.png');
+$icon_excel: url('../img/excel.png');
+$icon_arrow: url('../img/arrow.png');
+$icon_cross: url('../img/cross.png');

@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		//-base(href="http://ivanmakarov.xyz/portfolio/test_7vetrov/")
+		title Семь Ветров &mdash; тестовое задание
+		link(rel="stylesheet" href="css/main.min.css")
+		link(rel="stylesheet" href="css/owl.carousel.min.css")
+		script(src="js/jquery.min.js")
+		script(src="js/owl.carousel.min.js" defer)
+		script(src="js/main.min.js" defer)
+	body.body
+		.body-container
+			include blocks/header/header
+			main.main
+				include blocks/menu/menu
+				include blocks/slider/slider			
+				include blocks/catalogue/catalogue
+			include blocks/footer/footer
+		include blocks/modals/modals
+
+		

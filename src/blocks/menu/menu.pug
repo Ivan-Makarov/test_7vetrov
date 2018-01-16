@@ -1,0 +1,8 @@
+nav.nav
+	.content
+		ul.nav__list
+			each section in navSections
+				li.nav__list-item
+					a.link.nav__link(href=`#${section.en}`) #{section.ru}
+
+

@@ -1,0 +1,11 @@
+header.header#header
+	.content.container-flex.container-flex_sb
+		a(href="").img-container.header__logo
+			img(src=`${company.logo}` alt!=`${company.name + '' + company.slogan}`)
+
+		.header__contacts.container-flex.container-flex_col
+			each number in company.tel
+				a.header__tel(href!=`tel:${number}`) #{company.formatTel(number)}
+			a.link.header__feedback-link.js-modal(href="") Обратная связь
+
+		

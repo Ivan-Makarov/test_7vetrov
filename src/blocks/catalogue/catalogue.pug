@@ -1,0 +1,63 @@
+section.catalogue
+	.content
+		include breadcrumbs/breadcrumbs
+		.catalogue__main.container-flex
+			section.catalogue__menu.catalogue-menu
+				ul.catalogue-menu__list
+					each category in categories
+						
+						mixin submenu(category)
+							if category.submenu
+								each item in category.submenu
+									if item.active
+										li.catalogue-submenu__item
+											a(href=``).link.catalogue-submenu__link.active #{item.name[0].toUpperCase() + item.name.substring(1).toLowerCase()}
+									else
+										li.catalogue-submenu__item
+											a(href=``).link.catalogue-submenu__link #{item.name[0].toUpperCase() + item.name.substring(1).toLowerCase()}
+
+						if category.active
+							li.catalogue-menu__item
+								a(href=``).link.catalogue-menu__link.active #{category.name}
+								ul.catalogue__submenu-list.catalogue-submenu
+									+submenu(category)
+						else
+							li.catalogue-menu__item
+								a(href=``).link.catalogue-menu__link #{category.name}
+								ul.catalogue__submenu-list.catalogue-submenu.hidden
+									+submenu(category)
+							
+				a.link.download-price(href="" download) Прайс-лист
+
+			.catalogue__body
+				section.catalogue__items.catalogue-items
+					ul.catalogue-items__list.container-flex
+						each item in catalogue.items
+							li.catalogue-items__list-item
+								article.catalogue__item.catalogue-item.container-flex.container-flex_col.container-flex_sb
+									div
+										.img-container.catalogue-item__img
+											img(src=`${item.img}` alt!=`${item.name}`)
+										h2.catalogue-item__name
+											a.catalogue-item__link(href=`${item.link}`) !{item.name}
+									.container-flex.container-flex_sb
+										.catalogue-item__price #{catalogue.formatPrice(item)} р.
+										button.btn.btn_cart.catalogue-item__btn-cart
+					
+					.catalogue-items__pagination
+						ul.page-list.catalogue__page-list
+							li.page-list__item
+								a.page-list__link.link 1
+							li.page-list__item
+								a.page-list__link.link 2
+							li.page-list__item
+								a.page-list__link.link.active 3
+							li.page-list__item
+								a.page-list__link.link 4
+							li.page-list__item
+								a.page-list__link.link 5
+							
+
+				section.catalogue__text.container-flex
+					each piece in catalogue.text
+						p.catalogue__text-piece #{piece}

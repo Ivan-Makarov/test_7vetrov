@@ -1,0 +1,16 @@
+@import "normalize";
+
+@import "variables";
+@import "fonts";
+@import "mixins";
+
+@import "general";
+
+@import "../blocks/header/header";
+@import "../blocks/menu/menu";
+@import "../blocks/slider/slider";
+@import "../blocks/catalogue/catalogue";
+@import "../blocks/footer/footer";
+@import "../blocks/modals/modals";
+
+

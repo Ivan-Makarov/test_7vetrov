@@ -1,0 +1,64 @@
+.header {
+	padding: 40px 0 65px;
+	background-color: $header_bgc;
+	&__logo {
+		height: 100px;
+		align-self: flex-end;
+	}
+	&__tel {
+		align-self: flex-end;
+		font-family: $font_family_emph;
+		font-size: 40px;
+		line-height: 1;
+		margin-bottom: 5px;
+		&:hover {
+			color: black
+		}
+	}
+	&__feedback-link {
+		font-size: 24px;
+		font-weight: 600;
+		align-self: flex-end;
+		border-bottom: 2px dashed $text_col_main;
+		&:hover {
+			border-bottom-style: solid;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.header {
+		padding: 20px 0 25px;
+		&__tel {
+			font-size: 20px;
+		}
+		&__feedback-link {
+			font-size: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.header {
+		&__logo {
+			height: 50px;
+			align-self: center;
+			img {
+				height: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.header {
+		> .content {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__contacts {
+			align-items: center;
+			margin-top: 20px;
+		}	
+	}
+}

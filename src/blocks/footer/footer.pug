@@ -1,0 +1,17 @@
+footer.footer
+	.content.container-flex.container-flex_sb
+		.container-flex.container-flex_col
+			div !{company.copyright}
+			a.footer__email(href=`mailto:${company.email}`) #{company.email}
+		ul.footer__links.container-flex.container-flex_col
+			each section in navSections
+				li.footer__links-item
+					a.link.footer__link(href=`#${section.en}`) #{section.ru}
+		.developer.container-flex
+			.img-container.developer__logo
+				img(src=`${developer.logo}` alt=`${developer.company}`)
+			.developer__company
+				a.developer__link(href=`${developer.link}`) Разработка сайта &mdash;
+				| !{developer.company}
+	
+	

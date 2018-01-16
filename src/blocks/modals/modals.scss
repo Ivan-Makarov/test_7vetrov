@@ -1,0 +1,16 @@
+@import 'feedback/feedback';
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding: 50px 30px;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(black, 0.5);
+	z-index: 10000;
+}

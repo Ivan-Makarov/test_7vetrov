@@ -1,0 +1,28 @@
+.breadcrumbs {
+	padding: 6px 0 7px;
+	flex-wrap: wrap;
+	&__item {
+		display: block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+		&:not(:last-child) {
+			&::after {
+				content: '/';
+				padding: 0 8px 0 6px;
+			}
+		}
+	}
+	&__link {
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.breadcrumbs {
+		font-size: 10px;
+	}
+}
